@@ -11,3 +11,6 @@
   - Unsupervised learning allows us to approach problems with little or no idea what our results should look like.
   - We can derive structure from data where we don't know necessarily know the effect of the variables. 
   - Clustering
+- Model and Cost Function
+- Parameter Learning
+- 
