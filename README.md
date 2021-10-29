@@ -19,3 +19,11 @@
   - Addition and Scalar Multiplication
   - Matrix Multiplication
   - Inverse and Transpose
+
+## Week 2
+### Environment Setup Instruction
+  - Octave or MATLAB
+  `h(x) = θ0x0 + θ1x1 + θ2x2 + ... + θnxn`
+### Multivariate Linear Regressioon
+  - Multiple Features
+  - Gradient Descent For Multiple Variables
