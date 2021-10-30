@@ -23,7 +23,17 @@
 ## Week 2
 ### Environment Setup Instruction
   - Octave or MATLAB
-  `h(x) = θ0x0 + θ1x1 + θ2x2 + ... + θnxn`
+  - `h(x) = θ0x0 + θ1x1 + θ2x2 + ... + θnxn`
 ### Multivariate Linear Regressioon
   - Multiple Features
   - Gradient Descent For Multiple Variables
+    - Normalization
+  - Features and Polynmial Regression
+### Coputing Parameters Analytically
+  - Normal Equation
+    - Don't need α
+    - Don't need to iterate
+    - Need to compute (XTX)-1
+    - Slow if n is very large (eg. n > 10000)
+  - Normal Equation Noninvertibility
+
