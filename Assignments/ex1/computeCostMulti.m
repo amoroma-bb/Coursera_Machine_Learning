@@ -15,7 +15,7 @@ J = 0;
 
 predictions = X * theta;
 errors = (predictions - y) .^ 2;
-J = 1/(2m)*sum(errors);
+J = 1/(2*m)*sum(errors);
 
 
 % =========================================================================
