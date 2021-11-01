@@ -44,7 +44,7 @@
   - Hypothesis Representation
     - sigmoid function
     - ![equation](<img src="https://latex.codecogs.com/svg.image?h_{\theta}(X)&space;=&space;g(\theta^TX)&space;&space;" title="h_{\theta}(X) = g(\theta^TX) " />)
-    - ![equation](<img src="https://latex.codecogs.com/svg.image?g(z)&space;=&space;1/(1&plus;e^{-z})" title="g(z) = 1/(1+e^{-z})" />) 
+    - ![equation](https://latex.codecogs.com/svg.image?g(z)%20=%201/(1&plus;e%5E%7B-z%7D)) 
   - Decision Boundary
 
 ### Logistic Regression Model
