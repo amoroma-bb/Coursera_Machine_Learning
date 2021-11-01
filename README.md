@@ -33,7 +33,16 @@
   - Normal Equation
     - Don't need α
     - Don't need to iterate
-    - Need to compute (XTX)-1
+    - Need to compute ![equation](https://latex.codecogs.com/svg.image?(X^{T}*X)^{-1})
     - Slow if n is very large (eg. n > 10000)
   - Normal Equation Noninvertibility
 
+## Week 3
+### Classification and Representation
+  - Classification
+    - Logistic Regression
+  - Hypothesis Representation
+    - sigmoid function
+  - Decision Boundary
+
+### Logistic Regression Model
