@@ -23,7 +23,7 @@
 ## Week 2
 ### Environment Setup Instruction
   - Octave or MATLAB
-  - `h(x) = θ0x0 + θ1x1 + θ2x2 + ... + θnxn`
+  - $`\[h(x) =\theta _{0}*x_{0} +\theta _{1}*x_{1} + \theta _{2}*x_{2} + ... + \theta _{n}*x_{n}\]`$
 ### Multivariate Linear Regressioon
   - Multiple Features
   - Gradient Descent For Multiple Variables
