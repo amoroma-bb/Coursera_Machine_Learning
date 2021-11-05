@@ -43,8 +43,46 @@
     - Logistic Regression
   - Hypothesis Representation
     - sigmoid function
-    - ![equation](https://latex.codecogs.com/svg.image?h_{\theta}&space;=&space;g(\theta^TX))
+    - ![equation](https://latex.codecogs.com/svg.image?h_{\theta}(X)&space;=&space;g(\theta^TX))
     - ![equation](https://latex.codecogs.com/svg.image?g(z)%20=%201/(1&plus;e%5E%7B-z%7D)) 
   - Decision Boundary
 
 ### Logistic Regression Model
+  - Cost Function
+    - ![euqation](https://latex.codecogs.com/svg.image?Cost(h_%7B%5Ctheta%7D(x),y)%20=%5Cbegin%7Bcases%7D%20-log(h_%7B%5Ctheta%7D(x))%20&%20%5Ctext%7B%20if%20%7D%20y=1%20%5C%5C%20-log(1-h_%7B%5Ctheta%7D(x))&%20%5Ctext%7B%20if%20%7D%20y=0%20%5Cend%7Bcases%7D)
+  - Simplified Cost Function and Gradient Descent
+    - ![equation](https://latex.codecogs.com/svg.image?Cost(h_{\theta}(x),y)&space;=&space;-ylog(h_{\theta}(x))-(1-y)log(1-h_{\theta}(x)))
+  - Advanced Optimization 
+    1. Gradient descent
+    2. Conjugate gradient
+    3. BFGS
+    4. L-BFGS
+
+    ` 2-4 No need to manually pick α. Often faster than gradient descent.
+    More complex!`
+
+    ```MATLAB
+    function [jVal, gradient] = costFunction(theta)
+      jVal = [...code to compute J(theta)...];
+      gradient = [...code to compute derivative of J(theta)...];
+    end
+    ```
+
+    ```MATLAB
+    options = optimset('GradObj', 'on', 'MaxIter', 100);
+    initialTheta = zeros(2,1);
+    [optTheta, functionVal, exitFlag] = fminunc(@costFunction, initialTheta, options);
+    ```
+### Multiclass Classification
+  - Multiclass Classification: One vs all
+  
+### Solving the Probelm of Overfitting
+  - The Problem of Overfitting
+    1. Reduce number of features
+        - Manually select which features to keep
+        - Model selection algorithm
+    2. Regularization
+        - Keep all the features, but reduce magnitude / values of parameters
+        - Works well when we have a lot of features, each of which contributes a bit to predicting y
+  - Cost Function
+    1. $min_{\theta}\frac{1}{2m}\sum_{i=1}^{m}(h_{\theta}(x^{(i)})-y^{(i)})^{2}+\lambda\sum_{j=1}^{n}\theta_{j}^{2}$
