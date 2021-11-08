@@ -96,4 +96,20 @@
     \newline \newline
     \begin{align*}& \theta = \left( X^TX + \lambda \cdot L \right)^{-1} X^Ty \newline& \text{where}\ \ L = \begin{bmatrix} 0 & & & & \newline & 1 & & & \newline & & 1 & & \newline & & & \ddots & \newline & & & & 1 \newline\end{bmatrix}\end{align*}
     $
-  - Regularized Logistic Regression
+  - Regularized Logistic Regression 
+    ``` MATLAB
+    function [jVal, gradient] = costFunction(theta)
+      jVal = [code to compute J(theta)];
+
+      gradient(1) = [code to compute derivative of theta0];
+
+      gradient(2) = [code to compute derivative of theta1];
+
+      .
+      .
+      .
+
+      gradient(n+1) = [code to compute derivative of thetan];
+    ```
+  
+  
