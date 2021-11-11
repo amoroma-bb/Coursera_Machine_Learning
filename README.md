@@ -111,5 +111,41 @@
 
       gradient(n+1) = [code to compute derivative of thetan];
     ```
+## Week 4
+### Motivations
+  - Non-linear Hypotheses
+  - Neurons and the Brain
+
+### Neural Networks
+  - Model Representation 1
+   
+  $
+  [x_{0} \ x_{1} \ x_{2}] -> [a_{1}^{2} \ a_{2}^{2} \ a_{3}^{2}] -> h_{\theta}(x)
+  $ 
+
+  $
+  \begin{align*} a_1^{(2)} = g(\Theta_{10}^{(1)}x_0 + \Theta_{11}^{(1)}x_1 + \Theta_{12}^{(1)}x_2 + \Theta_{13}^{(1)}x_3) \newline a_2^{(2)} = g(\Theta_{20}^{(1)}x_0 + \Theta_{21}^{(1)}x_1 + \Theta_{22}^{(1)}x_2 + \Theta_{23}^{(1)}x_3) \newline a_3^{(2)} = g(\Theta_{30}^{(1)}x_0 + \Theta_{31}^{(1)}x_1 + \Theta_{32}^{(1)}x_2 + \Theta_{33}^{(1)}x_3) \newline h_\Theta(x) = a_1^{(3)} = g(\Theta_{10}^{(2)}a_0^{(2)} + \Theta_{11}^{(2)}a_1^{(2)} + \Theta_{12}^{(2)}a_2^{(2)} + \Theta_{13}^{(2)}a_3^{(2)}) \newline \end{align*}
+  $
   
+  - Model Representation 2
+  $
+  \begin{align*}a_1^{(2)} = g(z_1^{(2)}) \newline a_2^{(2)} = g(z_2^{(2)}) \newline a_3^{(2)} = g(z_3^{(2)}) \newline \end{align*}
+  $
   
+  $\begin{align*}x = \begin{bmatrix}x_0 \newline x_1 \newline\cdots \newline x_n\end{bmatrix} &z^{(j)} = \begin{bmatrix}z_1^{(j)} \newline z_2^{(j)} \newline\cdots \newline z_n^{(j)}\end{bmatrix}\end{align*}
+  $
+
+  $
+  z^{(j)} = \Theta^{(j-1)}a^{(j-1)}
+  \newline 
+  \newline
+  z^{(j+1)} = \Theta^{(j)}a^{(j)}
+  $
+  We get the final z vector by multiplying the next matrixs after $\Theta^{(j-1)}$ with the values of all the activation nodes we just got. The last theta matrix $\Theta^{j}$ will have only one row which is multiplied by one column $a^{(j)}$ so that our result is a single number.
+
+  $
+  h_{\Theta}(x) = a^{(j+1)} = g(z^{(j+1)})
+  $
+### Applications
+  - Examples and Intuitions
+  - Multiclass Classification
