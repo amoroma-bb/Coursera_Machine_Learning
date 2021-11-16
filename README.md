@@ -149,3 +149,75 @@
 ### Applications
   - Examples and Intuitions
   - Multiclass Classification
+
+## Week 5
+### Cost Function and Backpropagation
+  - L = total no. of layers in network
+  - $s_{l}$ = no. units (not counting bias unit) in layer l
+  - K = output units
+  - Neural networks cost function 
+  $\begin{gather*} J(\Theta) = - \frac{1}{m} \sum_{i=1}^m \sum_{k=1}^K \left[y^{(i)}_k \log ((h_\Theta (x^{(i)}))_k) + (1 - y^{(i)}_k)\log (1 - (h_\Theta(x^{(i)}))_k)\right] + \frac{\lambda}{2m}\sum_{l=1}^{L-1} \sum_{i=1}^{s_l} \sum_{j=1}^{s_{l+1}} ( \Theta_{j,i}^{(l)})^2\end{gather*}
+  $
+  - Backpropagation Algorithm
+  - Backpropagation Intuition
+
+### Backpropagation in Practice
+  - With nerual networks, we are working with sets of matrices
+    $\begin{align*} \Theta^{(1)}, \Theta^{(2)}, \Theta^{(3)}, \dots \newline D^{(1)}, D^{(2)}, D^{(3)}, \dots \end{align*}
+    $
+
+    In order to use optimizing functions such as "fminunc()", we will want to "unroll" all the elements and put them into one long vector:
+
+    ``` MATLAB
+    thetaVector = [ Theta1(:); Theta2(:); Theta3(:); ]
+    deltaVector = [ D1(:); D2(:); D3(:) ]
+    ```
+
+    Get back our original matrices from the "unrolled" versions:
+    ```MATLAB
+    Theta1 = reshape(thetaVector(1:110),10,11)
+    Theta2 = reshape(thetaVector(111:220),10,11)
+    Theta3 = reshape(thetaVector(221:231),1,11)
+    ```
+  
+  - Gradient Cheching
+  Once verified once that backpropagation algorithm is correct, then close compute gradApprox. Becasue gradApprox is slow.
+  ```MATLAB
+  epsilon = 1e-4;
+  for i = 1:n,
+    thetaPlus = theta;
+    thetaPlus(i) += epsilon;
+    thetaMinus = theta;
+    thetaMinus(i) -= epsilon;
+    gradApprox(i) = (J(thetaPlus) - J(thetaMinus))/(2*epsilon)
+  end;
+  ```
+  - Random Initialization
+    
+    Random initialization: Symmetry breaking
+    ```MATLAB
+    If the dimensions of Theta1 is 10x11, Theta2 is 10x11 and Theta3 is 1x11.
+
+    Theta1 = rand(10,11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+    Theta2 = rand(10,11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+    Theta3 = rand(1,11) * (2 * INIT_EPSILON) - INIT_EPSILON;
+
+    ```
+  
+  - Put it Together
+    Training a neural network
+
+    No. of input units: Dimension of features
+
+    No. of output units: Number of classes
+
+    Reasonable default: 1 hidden layer, or if > 1 hidden layer, have same no. of hidden units in every layer (usually the more the better)
+
+    1. Randomly initialize weights
+    2. Implement of forward propagation to get $h_{\Theta}(x^{(i)})$ for any $x^{(i)}$
+    3. Implement code to compute cost function $J(\Theta)$
+    4. Implement backpropagation to compute partial derivatives
+    5. Use gradient cheching
+    6. Use gradient descent or advanced optimization method with backpropagation to try to minimize J as a function of parameters $\Theta$
+
+    
