@@ -220,4 +220,9 @@
     5. Use gradient cheching
     6. Use gradient descent or advanced optimization method with backpropagation to try to minimize J as a function of parameters $\Theta$
 
-    
+## Week 6
+
+### Evaluating a Learning Algorithm
+  - Evaluating a Hypothesis
+  - Bias vs. Variance
+  - Learning Curves
