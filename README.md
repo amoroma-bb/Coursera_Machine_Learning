@@ -226,3 +226,27 @@
   - Evaluating a Hypothesis
   - Bias vs. Variance
   - Learning Curves
+
+### Building a Spam Classifier
+  - Prioritzing What to Work on
+  - Error Analysis 
+    1. Start with a simple algorithm that you can impelement quickly
+    2. Plot learning curves to decide if more data, more features, etc. are likely to help
+    3. Error analysis: Manually examine the examples that your algorithm made errors on.
+
+### Handling Skewed Data
+  - Error Metrics for Skewed
+  - Trading Off Precision and Recall
+
+### Using Large Data Sets
+  - Data For Machine Learning
+
+## Week 7
+### Large Margin Classification
+  - Optimization Objective
+  - Large Margin Intuition
+  - Mathematics Behind Large Margin Classification
+
+### Kernels
+
+### SVMs in Practice
