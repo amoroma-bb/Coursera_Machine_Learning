@@ -250,3 +250,44 @@
 ### Kernels
 
 ### SVMs in Practice
+
+## Week 8
+### Clustering
+  - Unsupervised Learning
+  - K-Means Algorithm
+  - Optimization Objective
+    1. $c^{(i)}$ = index of cluster to which example $x^{(i)}$ is currently assigned
+    2. $\mu_{k}$ = cluster centroid k
+    3. $\mu_{c^{(i)}}$ = cluster centroid of cluster to which example has been assigned
+  - Random Initialization
+  - Choosing the Number of Clusters
+
+### Motivation
+  - Data Compression
+  - Visualization
+
+### Principla Component Analysis
+
+### Applying PCA
+  - Reconstruction from Compressed Representation
+  - Choosing the Number of Principal Components
+    - 99 % of variance is retained
+  - Advice for Applying PCA
+    - Design of ML system
+      1. Get training set
+      2. RUn PCA to reduce x in dimension to get z
+      3. Train logistic regression on {z,y}
+      4. Test on test set: Map x to z
+    
+## Week 9
+### Density Estimation
+
+### Building an Anomaly Detection System
+
+### Multivariate Gaussian Distribution
+
+### Predicting Moive Ratings
+
+### Collaborative Filtering
+
+### Low Rank Matrix Factorization
